@@ -11,7 +11,9 @@ server.get('/teste', (req, res) => {
 
 //Route params 
 server.get('/users/:id', (req,res) => {
-  const id = req.params.id
+  
+  //desconstrucao const id = req.params.id
+  const { id } = req.params
   return res.json({ hello: `Buscando o usuario ${id} ` })
 })
 
